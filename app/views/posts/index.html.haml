@@ -1,0 +1,19 @@
+#control_panel
+  = link_to '404', '#', onclick: 'query404()', class: 'button'
+  = link_to '500', '#', onclick: 'query500()', class: 'button'
+  = link_to '204', '#', onclick: 'query204()', class: 'button'
+  = link_to '451', '#', onclick: 'query451()', class: 'button'
+  #status
+#posts
+  - @posts.each do |post|
+    .post_container{id: "post_#{post.id}"}
+      .post_id
+        = post.id
+      .post_author
+        = post.author
+      .post_controls
+        %a{href: '#', onclick: "query200(#{post.id})"}
+          ×
+      .post_content
+        = post.content
+#bb

@@ -1,0 +1,1 @@
+(0..30).each { Post.create author: Faker::Name.name, content: Faker::Hipster.paragraph }
