@@ -8,9 +8,9 @@ function query200(id) {
     });
 }
 
-function query204() {
+function query401() {
     $.ajax({
-        url: '/posts/204',
+        url: '/posts/401',
         method: 'GET',
         complete: function(r) {
             $('#status').html(r.status);

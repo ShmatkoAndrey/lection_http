@@ -6,8 +6,8 @@ class PostsController < ApplicationController
   def show
     if params[:id] == '666'
       render 'posts/broken', :status => 451
-    elsif params[:id] == '204'
-      render :status => 204
+    elsif params[:id] == '401'
+      render :status =>999
     else
       @post = Post.find(params[:id])
     end
